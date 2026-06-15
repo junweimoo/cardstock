@@ -1,0 +1,22 @@
+[build-system]
+requires = ["scikit-build-core>=0.10", "nanobind>=2.0"]
+build-backend = "scikit_build_core.build"
+
+[project]
+name = "imgengine"
+version = "0.0.1"
+description = "Static image composition engine (C++ core, Python API)"
+requires-python = ">=3.9"
+readme = "README.md"
+
+[project.optional-dependencies]
+test = ["pytest>=8.0"]
+
+[tool.scikit-build]
+build-dir = "build/{wheel_tag}"
+cmake.version = ">=3.26"
+cmake.build-type = "Release"
+wheel.packages = ["python/imgengine"]
+
+[tool.pytest.ini_options]
+testpaths = ["tests"]

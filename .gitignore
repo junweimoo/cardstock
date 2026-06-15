@@ -1,0 +1,9 @@
+notes/
+build/
+dist/
+*.egg-info/
+__pycache__/
+.venv/
+*.png
+compile_commands.json
+.cache/
